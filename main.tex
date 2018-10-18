@@ -14,6 +14,7 @@
 
 \usepackage[para,online,flushleft]{threeparttable}
 \usepackage{tabulary}
+\usepackage{url}
 
 \graphicspath{{figs/}}
 \DeclareGraphicsExtensions{.pdf, .png, .ps}
@@ -30,13 +31,14 @@
 %
 \author{Chris Brown}
 %
-\authorrunning{F. Author et al.}
+\authorrunning{Brown}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
 \institute{North Carolina State University \\
-Raleigh, NC USA \\
-\email{dcbrow10@ncsu.edu}}
+Raleigh, NC \\
+\email{dcbrow10@ncsu.edu} \\
+\url{http://www4.ncsu.edu/~dcbrow10/}}
 %
 \maketitle              % typeset the header of the contribution
 %
@@ -44,7 +46,7 @@ Raleigh, NC USA \\
 The abstract should briefly summarize the contents of the paper in
 15--250 words.
 
-\keywords{First keyword  \and Second keyword \and Another keyword.}
+\keywords{Software Engineering \and Recommender System \and Digital Nudge}
 \end{abstract}
 %
 %
@@ -52,97 +54,110 @@ The abstract should briefly summarize the contents of the paper in
 % http://www4.ncsu.edu/~jssmit11/Publications/smith_proposal.pdf
 \section{Thesis Statement}
 
-\insight{My very cool statement.}
-
-
-
-
-
+\insight{My very cool statement. Something about digital nudges for developers or invent a new term? This conceptual framework shows that \concept increases developer awareness and usage of software engineering tools...}
 
 \section{Introduction}
 \todo{TODO: Use me for marking notes.}
 
+\section{Motivation}
+Software engineers don't use tools!
+
+\section{Problem}
+Not using tools is bad (wastes time, money, effort, etc.)
+
+\section{Objectives}
+Increasing tool awareness can increase developer productivity...
+
+\section{Approach}
+Use \concept to make effective recommendations!
+
+\section{\concept}
+\concept is based on peer interactions~\cite{Murphy-Hill2011PeerInteraction}. Also digital nudging and behavioral psychology.
+
 \section{Proposal Outline}
 
-\section{Completed Research}
 
-Define a tool name with macros: \TOOL (\todo{See alias.tex}).
-
-\section{TODO}
-
-\section{Related Work}
-
-\section{Proposed Timeline}
-\subsection{A Subsection Sample}
-Please note that the first paragraph of a section or subsection is
-not indented. The first paragraph that follows a table, figure,
-equation etc. does not need an indent, either.
-
-Subsequent paragraphs, however, are indented.
-
-\subsubsection{Sample Heading (Third Level)} Only two levels of
-headings should be numbered. Lower level headings remain unnumbered;
-they are formatted as run-in headings.
-
-\paragraph{Sample Heading (Fourth Level)}
-The contribution should contain no more than four levels of
-headings. Table~\ref{tab1} gives a summary of all heading levels.
+See Table~\ref{tab1}.
+\todo{TODO: Better table~\ref{tab1}}
 
 \begin{table}
-\caption{Table captions should be placed above the
-tables.}\label{tab1}
+\caption{My dissertation proposal}\label{tab1}
+\centering
 \begin{tabular}{|l|l|l|}
 \hline
-Heading level &  Example & Font size and style\\
+RQ & Project & Status\\
 \hline
-Title (centered) &  {\Large\bfseries Lecture Notes} & 14 point, bold\\
-1st-level heading &  {\large\bfseries 1 Introduction} & 12 point, bold\\
-2nd-level heading & {\bfseries 2.1 Printing Area} & 10 point, bold\\
-3rd-level heading & {\bfseries Run-in Heading in Bold.} Text follows & 10 point, bold\\
-4th-level heading & {\itshape Lowest Level Heading.} Text follows & 10 point, italic\\
+1 & Peer Interactions & Done (VL/HCC'17)\\
+2 & \TOOL & TODO \\
+3 & & TODO \\
 \hline
 \end{tabular}
 \end{table}
 
+\section{Completed Research}
 
-\noindent Displayed equations are centered and set on a separate
-line.
-\begin{equation}
-x + y = z
-\end{equation}
-Please try to avoid rasterized images for line-art diagrams and
-schemas. Whenever possible, use vector graphics instead (see
-Fig.~\ref{fig1}).
+\subsection{``How Software Users Recommend Tools to Each Other" \\(Complete, VL/HCC 2017)}
+This project was accepted as a paper and presented at the 2017 Visual Languages and Human-Centric Computing conference~\cite{vlhcc17}. 
 
-\begin{figure}
-\includegraphics[width=\textwidth]{fig1.eps}
-\caption{A figure caption is always placed below the illustration.
-Please note that short captions are centered, while long ones are
-justified by the macro package automatically.} \label{fig1}
-\end{figure}
+\subsubsection{Study Rationale.}
 
-\begin{theorem}
-This is a sample theorem. The run-in heading is set in bold, while
-the following text appears in italics. Definitions, lemmas,
-propositions, and corollaries are styled the same way.
-\end{theorem}
-%
-% the environments 'definition', 'lemma', 'proposition', 'corollary',
-% 'remark', and 'example' are defined in the LLNCS documentclass as well.
-%
-\begin{proof}
-Proofs, examples, and remarks have the initial word in italics,
-while the following text appears in normal font.
-\end{proof}
-For citations of references, we prefer the use of square brackets
-and consecutive numbers. Citations using labels or the author/year
-convention are also acceptable. The following bibliography provides
-a sample reference list with entries for journal
-articles~\cite{ref_article1}, an LNCS chapter~\cite{ref_lncs1}, a
-book~\cite{ref_book1}, proceedings without editors~\cite{ref_proc1},
-and a homepage~\cite{ref_url1}. Multiple citations are grouped
-\cite{ref_article1,ref_lncs1,ref_book1},
-\cite{ref_article1,ref_book1,ref_proc1,ref_url1}.
+Why did we do this study?
+
+\subsubsection{Research Question.}
+This study sought to answer the following question: \\
+
+\textbf{RQ} What characteristics of peer interactions make
+recommendations effective?
+
+\subsubsection{Methodology.}
+
+\subsubsection{Results.}
+
+\subsection{\TOOL}
+
+\todo{This will hopefully be submitted before proposal}
+
+\subsubsection{Study Rationale.}
+
+\subsubsection{Research Question.}
+
+\subsubsection{Methodology.}
+
+\subsubsection{Results.}
+
+\section{TODO} 
+
+\todo{TODO: Come up with new project ideas for studies}
+
+\subsubsection{Study Rationale.}
+
+\subsubsection{Research Question.}
+
+\subsubsection{Proposed Study.} 
+
+\subsubsection{Hypothesis.} 
+
+\section{Related Work}
+
+\section{Project Risk and Mitigation}
+
+\section{Project Plan}
+
+This section outlines the schedule for completing my dissertation.
+
+\todo{TODO: Fancy figure for timeline}
+
+\subsection{Thesis Contract}
+
+\begin{itemize}
+  \item \textbf{Chapter 1}
+  \item \textbf{Chapter 2}
+  \item ...
+\end{itemize}
+
+\subsection{Proposed Timeline}
+Graduate May 2020
+
 %
 % ---- Bibliography ----
 %
@@ -152,25 +167,7 @@ and a homepage~\cite{ref_url1}. Multiple citations are grouped
 % \bibliographystyle{splncs04}
 % \bibliography{mybibliography}
 %
-\begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+\bibliographystyle{splncs04}
+\bibliography{main}
 
-\bibitem{ref_lncs1}
-Author, F., Author, S.: Title of a proceedings paper. In: Editor,
-F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
-Springer, Heidelberg (2016). \doi{10.10007/1234567890}
-
-\bibitem{ref_book1}
-Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
-Location (1999)
-
-\bibitem{ref_proc1}
-Author, A.-B.: Contribution title. In: 9th International Proceedings
-on Proceedings, pp. 1--2. Publisher, Location (2010)
-
-\bibitem{ref_url1}
-LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
-Oct 2017
-\end{thebibliography}
 \end{document}
