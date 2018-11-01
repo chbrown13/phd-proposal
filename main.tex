@@ -8,8 +8,8 @@
 \usepackage{graphicx}
 \usepackage{xspace}
 \usepackage{booktabs}
-
-\usepackage{enumitem}
+\usepackage{appendix}
+\usepackage{enumitem, amssymb}
 \usepackage{tikz}
 
 \usepackage[para,online,flushleft]{threeparttable}
@@ -48,122 +48,156 @@ The abstract should briefly summarize the contents of the paper in
 
 \keywords{Software Engineering \and Recommender Systems \and Digital Nudge}
 \end{abstract}
-%
-%
-% This outline is based on Justin Smith's proposal document
-% http://www4.ncsu.edu/~jssmit11/Publications/smith_proposal.pdf
+% Examples:
+% Justin Smith- http://www4.ncsu.edu/~jssmit11/Publications/smith_proposal.pdf
+% Titus- http://static.barik.net/barik/proposal/barik_proposal_approved.pdf
 \section{Thesis Statement}
 
 \insight{My very cool statement. Something about digital nudges for developers or invent a new term? This conceptual framework shows that \concept increases developer awareness and usage of software engineering tools...}
 
 \section{Introduction}
-\todo{TODO: Use me for marking notes.}
 
-\section{Motivation}
+\subsection{Motivation}
 Software engineers don't use tools!
 
-\section{Problem}
-Not using tools is bad (wastes time, money, effort, etc.)
+\subsection{Problem}
+Not using tools is bad (wastes time, money, effort, etc.) 
 
-\section{Objectives}
-Increasing tool awareness can increase developer productivity...
+\subsection{Objectives}
+Increasing tool awareness can increase developer productivity... For example, we developed an Eclipse plugin to improve code navigation called \textsl{Flower}~\cite{Flower}. Our evaluation showed that Flower's design principles and implementation helped increase branchless navigation while completing code searching tasks by an average of 126 seconds compared to other methods, making users more efficient.
 
-\section{Approach}
+\subsection{Approach}
 Use \concept to make effective recommendations!
 
-\section{Contributions}
-List research contributions here:
+\subsection{Contributions}
+The research contributions of my dissertation will be:
+\begin{enumerate}
+  \item a \emph{conceptual framework} \concept
+  \item a \emph{set of experiments} to evaluate and provide evidence for this framework (See Table~\ref{tab1})
+  \item an \emph{automated recommender system} (\TOOL) that integrates concepts from \concept to make tool recommendations to software engineers
+\end{enumerate}
 
-\section{\concept}
+\section{Background}
+
+\subsection{Peer Interactions}
+
+\subsection{Digital Nudge}
+
+
+\section{Conceptual Framework}
 \concept is based on peer interactions~\cite{Murphy-Hill2011PeerInteraction}. Also digital nudging and behavioral psychology.
 
 Brings up an interesting question/theory: Is a developer more likely to accept a recommendation because it is easy/visible + in the context of their work versus other factors, like timeliness, trust (outsider/insider), value, risk, etc.
 
-\section{Proposal Outline}
 
 
-
-See Table~\ref{tab1}.
-\todo{TODO: Better table~\ref{tab1}}
 
 \begin{table}
 \caption{My dissertation proposal}\label{tab1}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
 \hline
-RQ & Project & Status\\
+Project & Status\\
 \hline
-1 & Peer Interactions & Done (VL/HCC'17)\\
-2 & \TOOL & TODO \\
-3 & & TODO \\
+\texttt{interactions} & Done (VL/HCC'17)\\
+\textsl{\texttt{Flower}} \todo{Do 2nd-author papers count?} & Done (VL/HCC'17)\\
+\texttt{\TOOL} & TODO \\
+\texttt{suggestions} & TODO \\
 \hline
 \end{tabular}
 \end{table}
 
-\section{Completed Research}
+\section{Experiments and Evaluations}
 
-\subsection{``How Software Users Recommend Tools to Each Other" \\(Complete, VL/HCC 2017)}
-This project was accepted as a paper and presented at the 2017 Visual Languages and Human-Centric Computing conference~\cite{vlhcc17}. 
+\subsection{[\texttt{interactions}] ``How Software Users Recommend Tools to Each Other" (Completed, Spring 2017)}
 
 \subsubsection{Study Rationale.}
 
-Why did we do this study?
+Prior research suggests peer interactions are the most effective way software developers discover new tools~\cite{Murphy-Hill2015HowDoUsers,Murphy-Hill2011PeerInteraction}. Additionally, peer learning has also shown to be effective in other areas of software engineering such as during pair programming~\cite{} and code reviews~\cite{}, as well as in other domains like education~\cite{}. The goal of this study was to examine peer interactions in an experimental setting to determine what makes user-to-user recommendations an effective mode of tool discovery and to provide implications for improving automated tool recommendation approaches.
 
 \subsubsection{Research Question.}
-This study sought to answer the following question: \\
 
-\textbf{RQ} What characteristics of peer interactions make
-recommendations effective?
+\begin{description}
+  \item[RQ] What characteristics of peer interactions make recommendations effective?
+\end{description}
 
 \subsubsection{Methodology.}
 
 \subsubsection{Results.}
 
-\subsection{\TOOL}
+This results of this project were published at the 2017 Visual Languages and Human-Centric Computing (VL/HCC) conference~\cite{Interactions}. Out of 142 total tool suggestions between participants in our study, we identified 71 effective, 35 ineffective, and 36 unknown recommendations.
 
-\todo{This will hopefully be submitted before proposal}
+\subsection{[\texttt{bot}] ``\TOOL" (In Progress, Fall 2018)}
 
-\subsubsection{Study Rationale.}
+\subsubsection{Study Rationale.} active help system~\cite{Fischer1984ActiveHelpSystems}
 
-\subsubsection{Research Question.}
+\subsubsection{Research Questions.}
 
 \subsubsection{Methodology.}
 
-\subsubsection{Results.}
+\subsubsection{Results.} This results of this project have been submitted for publication at the 2019 Foundations of Software Engineering (FSE) conference.
+
+\subsection{[\texttt{suggestions}] ``Suggestions Study" (In Progress, Fall 2018)}
+
+\subsubsection{Study Rationale.} Analyze the effectiveness of the new GitHub code suggestion feature for pull requests.\footnote{https://blog.github.com/changelog/2018-10-16-suggested-changes/} Recommendations in a different domain.
+
+\subsubsection{Research Questions.}
+
+\subsubsection{Methodology.}
+
+\subsubsection{Results.} This results of this project have been submitted for publication at the 2019 Foundations of Software Engineering (FSE) conference.
 
 \section{TODO} 
 
 \todo{TODO: Come up with new project ideas for studies}
 
-\subsubsection{Study Rationale.}
+\subsection{[\texttt{codename}] ``paper title" (Proposed, Fall 2019)}
+
+\subsubsection{Study Rationale.} Something to wrap everything up nicely
 
 \subsubsection{Research Question.}
 
-\subsubsection{Proposed Study.} 
+\subsubsection{Methodology.} 
 
 \subsubsection{Hypothesis.} 
 
 \section{Related Work}
 
+\subsection{Digital Nudge}
+stuff about choice architecture, nudge theory, and human behavior
+
+\subsection{Peer Interaction/Learning}
+
+\subsection{Software Engineering Tool Adoption}
+
+\subsection{Recommender Systems}
+
+
+
 \section{Project Plan}
 
 This section outlines the schedule for completing my dissertation.
 
-\subsection{Project Risk and Mitigation}
+\subsection{Completed Projects}
 
-\subsection{Thesis Contract}
-
-\begin{itemize}
-  \item \textbf{Chapter 1}
-  \item \textbf{Chapter 2}
-  \item ...
-\end{itemize}
+\subsection{TODO Projects}
 
 \subsection{Proposed Timeline}
 Graduate May 2020
 
-\todo{TODO: Fancy figure for timeline}
 
+\section{Thesis Contract}
+
+\begin{todolist}
+  \item \textbf{Chapter 1}
+  \item \textbf{Chapter 2}
+  \item ...
+\end{todolist}
+
+\section{Appendix}
+\appendix
+\section{Appendix A}
+If necessary...
 
 %
 % ---- Bibliography ----
