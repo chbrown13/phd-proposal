@@ -53,18 +53,26 @@ The abstract should briefly summarize the contents of the paper in
 % Titus- http://static.barik.net/barik/proposal/barik_proposal_approved.pdf
 \section{Thesis Statement}
 
-\insight{My very cool statement. Something about digital nudges for developers or invent a new term? This conceptual framework shows that \concept increases developer awareness and usage of software engineering tools...}
+\insight{My very cool thesis statement. Something about digital nudges for developers or invent a new term? This conceptual framework shows that \concept increases developer awareness and usage of software engineering tools...}
 
 \section{Introduction}
 
 \subsection{Motivation}
-Software engineers don't use tools!
+Code quality is very important.
+
+So is software developer productivity
 
 \subsection{Problem}
-Not using tools is bad (wastes time, money, effort, etc.) 
+Code is not high-quality...
+
+Software engineers don't use tools! 
+
+And not using tools is bad (wastes time, money, effort, etc.)~\cite{SoftwareFailWatch}~\cite{NIST}. Studies show debugging costs increase the longer a bug remains in code~\cite{SEEconomics}~\cite{SoftwareAssuranceSDLC}.
 
 \subsection{Objectives}
-Increasing tool awareness can increase developer productivity... For example, we developed an Eclipse plugin to improve code navigation called \textsl{Flower}~\cite{Flower}. Our evaluation showed that Flower's design principles and implementation helped increase branchless navigation while completing code searching tasks by an average of 126 seconds compared to other methods, making users more efficient.
+The objective is to use \concept to improve developer behavior to make them more productive and effective.- tools can increase efficiency in development tasks. 
+
+For example, we developed an Eclipse plugin to improve code navigation called \textsl{Flower}~\cite{Flower}. Our evaluation found that Flower's design principles and implementation improved branchless navigation during code search tasks by an average of 126 seconds.
 
 \subsection{Approach}
 Use \concept to make effective recommendations!
@@ -79,17 +87,24 @@ The research contributions of my dissertation will be:
 
 \section{Background}
 
-\subsection{Peer Interactions}
+These terms are key concepts necessary for understanding \concept.
 
 \subsection{Digital Nudge}
 
+\textit{digital nudge}
+
+\subsection{Peer Interaction}
+
+Previous work by Murphy-Hill defines a \textit{peer interaction} as the process of discovering tools from colleagues during normal work activities~\cite{Murphy-Hill2011PeerInteraction}.
+
+\subsection{Tool}
+
+In the context of my research, a \textit{tool} is defined as any software command or feature that accomplishes a task. Similarly, a \textit{software engineering tool} refers to any tool that performs a software development or programming task. Examples include static analysis tools...
 
 \section{Conceptual Framework}
-\concept is based on peer interactions~\cite{Murphy-Hill2011PeerInteraction}. Also digital nudging and behavioral psychology.
+\concept is based on peer interactions~\cite{Murphy-Hill2011PeerInteraction}. Also digital nudging, persuasion/nudge theory, diffusion of innovations, behavioral psychology...
 
 Brings up an interesting question/theory: Is a developer more likely to accept a recommendation because it is easy/visible + in the context of their work versus other factors, like timeliness, trust (outsider/insider), value, risk, etc.
-
-
 
 
 \begin{table}
@@ -113,7 +128,7 @@ Project & Status\\
 
 \subsubsection{Study Rationale.}
 
-Prior research suggests peer interactions are the most effective way software developers discover new tools~\cite{Murphy-Hill2015HowDoUsers,Murphy-Hill2011PeerInteraction}. Additionally, peer learning has also shown to be effective in other areas of software engineering such as during pair programming~\cite{} and code reviews~\cite{}, as well as in other domains like education~\cite{}. The goal of this study was to examine peer interactions in an experimental setting to determine what makes user-to-user recommendations an effective mode of tool discovery and to provide implications for improving automated tool recommendation approaches.
+Prior research suggests peer interactions are the most effective way software developers learn about useful tools compared to other discovery methods~\cite{Murphy-Hill2015HowDoUsers,Murphy-Hill2011PeerInteraction}. The goal of this study was to examine peer interactions in an experimental setting to determine what makes user-to-user recommendations an effective mode of tool discovery and to provide implications for improving automated tool recommendation approaches.
 
 \subsubsection{Research Question.}
 
@@ -123,15 +138,40 @@ Prior research suggests peer interactions are the most effective way software de
 
 \subsubsection{Methodology.}
 
+To examine peer interactions between software users, we recruited pairs of participants to observe them complete data analysis tasks for our evaluation. In total we observed 13 pairs of participants, seven pairs of students and six pairs of professional analysts from the NC State Laboratory for Analytic Sciences (LAS).\footnote{https://ncsu-las.org/} The evaluation was divided into two phases with students and LAS employees. Participants were paired together using convenience sampling based on availability. The study tasks data from the Titanic shipwreck based on the data science competition from Kaggle~\cite{KaggleTitanic}. We screen and voice recorded each session to collect data to analyze for our evaluation. Participants were allowed to use the software of their choice to complete the tasks during the study.
+
+To investigate what aspects of peer interactions make tool recommendations effective, we examined five characteristics: Politeness, Persuasiveness, Receptiveness, Time Pressure, and Tool Observability. These characteristics were motivated from previous work in persuasion theory from psychology and interview results from Murphy-Hill's peer interaction studies. Furthermore, we collected additional data for characteristics in Phase 2 including the nature of relationship with their partner (Professional, Personal, Academic, or None) and previous computer-based work with their partner, excluding sending and receiving emails. We used psychology research to compile a list of criteria for politeness~\cite{LeechPolite}, persuasiveness~\cite{ShenPersuasive}, and receptiveness~\cite{FoggPersuasiveTech}. To observe time pressure, we searched for statements made by the participants regarding time during their session. Finally, we examined whether tools recommended between pairs had a graphical user interface to determine tool observability. 
+
+Two researchers watched each session to search for peer interactions. For each recommendation observed, we collected the following: \\- the type of peer interaction (Peer Observation or Peer Recommendation), \\
+- the approximate time in the video the recommendation took place, \\
+- which participants are the driver and navigator,\\
+- the study task,\\
+- the method of the driver and navigator (if possible),\\
+- the name and type of the recommended feature,\\
+- a transcript of the dialogue concerning the new tool,\\
+- the reaction of the recommendee,\\
+- instances in the study where the tool was re-used,\\
+- instances where the tool was ignored for a less efficient method,\\
+- the effectiveness, politeness, persuasiveness, and receptiveness scores,\\
+- whether the recommendations was under time pressure, and\\
+- if the recommendation was discussed during the interview and time of discussion in the video.
+
 \subsubsection{Results.}
 
-This results of this project were published at the 2017 Visual Languages and Human-Centric Computing (VL/HCC) conference~\cite{Interactions}. Out of 142 total tool suggestions between participants in our study, we identified 71 effective, 35 ineffective, and 36 unknown recommendations.
+This results of this project were published at the 2017 Visual Languages and Human-Centric Computing (VL/HCC) conference~\cite{Interactions}. We observed 142 total tool suggestions between participants in our study, and categorized 71 effective, 35 ineffective, and 36 unknown recommendations. We only found a significant difference in the outcome of recommendations that displayed receptiveness between pairs (Wilcoxon, \textit{p} = 0.0002). The implications of this work indicate that future automated tool recommendation approaches should prioritize user receptiveness in order to make more successful suggestions.
 
 \subsection{[\texttt{bot}] ``\TOOL" (In Progress, Fall 2018)}
 
-\subsubsection{Study Rationale.} active help system~\cite{Fischer1984ActiveHelpSystems}
+\subsubsection{Study Rationale.} 
+
+active help system~\cite{Fischer1984ActiveHelpSystems}
 
 \subsubsection{Research Questions.}
+
+\begin{description}
+  \item[RQ1] How applicable is \tool~to real-world software applications?
+  \item[RQ2] How useful are recommendations from \tool~to developers?
+\end{description}
 
 \subsubsection{Methodology.}
 
@@ -164,15 +204,19 @@ This results of this project were published at the 2017 Visual Languages and Hum
 \section{Related Work}
 
 \subsection{Digital Nudge}
-stuff about choice architecture, nudge theory, and human behavior
+stuff about choice architecture, nudge theory, human behavior, psychology, etc.
 
-\subsection{Peer Interaction/Learning}
+\subsection{Peer Interaction}
+
+Learning from peers, over-the-shoulder learning, peer observation and recommendation,
 
 \subsection{Software Engineering Tool Adoption}
 
+tools exist, make tasks effective, why don't developers use them?
+
 \subsection{Recommender Systems}
 
-
+general rec systems (i.e. Netflix), rec systems for SE
 
 \section{Project Plan}
 
