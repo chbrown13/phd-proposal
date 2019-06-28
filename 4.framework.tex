@@ -1,0 +1,124 @@
+\section{Conceptual Framework}
+
+\subsection{Demonstrate Desire}
+
+\subsection{Familiarity}
+
+\subsection{Social Context}
+
+\subsection{Developer Workflow}
+
+
+%This section presents approaches for making recommendations to developers. These designs are derived from prior work in peer interactions and concepts from nudge theory, and differ on the locality and actionability of the suggestions. Our conceptual framework introduces novel digital nudges types for making recommendations to software engineers: \telemarketer; \location; and \timing. Each of these constituted nudge types are defined and motivated below. This research aims to evaluate the effectiveness of the conceptual framework in increasing software engineering action adoption among developers by building tools and examining existing systems that implement these digital nudge types.d
+
+%\subsection{\location}
+
+To examine the effectiveness of spatial locality for digital nudges, we came up with \textit{situated nudges}. Situated nudges make suggestions to software developers at the location where a useful software engineering action is applicable.
+
+High spatial locality
+
+%\subsection{\timing}
+
+Location (hot and cold) [nudge theory] finds that timely feedback can improve acceptance of suggestion. Examples of these in real life? For example, handing out floss, right before entering a bathroom after eating ribs, increased chances of adopting flossing by 20\% (\todo{replace with example not completely made up}).
+
+To evaluate the timing of digital nudges, we introduce the concept of \emph{just-in-time nudges}. These nudges make recommendations to developers at a moment when a software engineering action is appropriate.
+
+We hypothesize that developers will prefer just-in-time nudges when a software engineering tool is most applicable over nudges presented at different times. Recommendations made when they are appropriate provide more convenience to users so developers don't have to figure out when's the best time to use a tool or practice. This can help improve adoption of software engineering actions for developers while they are completing programming tasks. A potential downside to just-in-time nudges is that they can interrupt developers in their work, which research suggests may lead to a loss of task context~\cite{parnin2010interrupted}.
+
+High temporal locality
+
+% \begin{figure*}
+% \centering
+% 	\includegraphics[width=1in]{images/error.png}
+% 	\caption{Example of a situated nudge}	
+% 	\label{fig:situated} 
+% \end{figure*}
+
+
+%\subsection{Public nudge}
+
+%Humans are more likely to adopt behavior if there is external pressure to do so.
+
+%We define \textit{public nudges} as nudges that are visible and available to see by a specific community. They may also involve social pressure if certain behaviors aren't adopted. For example, badges on GitHub are public nudges viewable to users who visit a repository and can influence their decision to contribute or use the product. These badges display whether projects adopt certain software engineering behaviors, such as passing builds. Figure \ref{fig:red_badge} presents a badge for a project that does not use a useful software engineering processes during development, while the developers for a project with a badge in Figure \ref{fig:green_badge} integrate software engineering actions in their development process. Trockman and colleagues examined the effect of these public nudges for npm\footnote{https://www.npmjs.com/} packages on GitHub and found that the addition of badges correlated with improvements in the quality of the project, i.e. adding a quality assurance badge displaying code coverage increased the coverage of tests~\cite{trockman2018badges}
+
+%Our hypothesis is that developers are more likely to adopt useful software engineering actions if they are publicly nudged to do so.
+
+% \begin{figure}
+% \centering
+% \subfigure[Project without a software engineering action]{
+% \label{fig:red_badge}
+% \includegraphics[width=\textwidth/2]{images/badge1.png}}
+% \qquad
+% \subfigure[Project with a software engineering action]{
+% \label{fig:green_badge}
+% \includegraphics[width=\textwidth/2]{images/badge2.png}}
+% \caption{Example of a public nudge}
+% \end{figure}
+
+% [benefits/trade-offs;hypothesis]
+
+% \subsection{Social nudge}
+
+% Nudge theory finds that people are more likely to adopt a useful behavior if others they know already do it. Perloff studied the impact of social media on body image and self-perception among American girls, and proposes using ``media-based interventions...to nudge individuals into changing their attitudes and behaviors"~\cite[p.~364]{perloff2014social}. This work suggests social media use is key in creating social comparisons and influencing users to adopt harmful behaviors such as body dissatisfaction and eating disorders.
+
+% To study digital nudges in a social context, we introduce \textit{social nudges}. These nudges suggest software engineering actions that have been adopted by a developer's friends or colleagues. An example of this is seen in prior work examining peer interactions. Murphy-Hill conducted interviews and surveys with software engineers and found that developers prefer recommendations from peers over other methods of tool discovery such as tutorials, discussion threads, tool encounters, and written descriptions~\cite{Murphy-Hill2015HowDoUsers}.
+
+% Our hypothesis is that developers are more likely to adopt behaviors recommended in a nudge if they know it is used by a friend or colleague.
+
+% \subsection{Apprehensive nudge}
+
+% If you can show a target behaviors usefulness by presenting multiple places it can be applied, people are more likely to adopt it.
+
+% We created the concept of \textit{apprehensive nudges}, which provide multiple locations where software engineering activities can be applied, to study how this impacts activity adoption for developers.
+
+% [Conceptual implementation]
+
+% [benefits/trade-offs;hypothesis]
+
+% \subsection{Automated nudge}
+
+% If you do the work for them, humans are more likely to adopt specific behaviors. \todo{Example= automatic magazine subscription renewal due to status quo bias [Nudge, 35]}
+
+% To determine if automatically performing software engineering actions for developers impacts adoption for developers, we introduce \textit{automated nudges}. There are many ways automation is used to improve software engineering and help developers adopt helpful behaviors. For instance, Mirhosseini and colleagues investigated creating automated pull requests to convince developers to upgrade outdated dependencies using greenkeeper\footnote{https://greenkeeper.io} to manage dependency package versions for GitHub projects~\cite{sam2017autopullrequests}. They found that automated pull requests were useful in increasing awareness of out-of-date package dependencies to developers.
+
+% [benefits/trade-offs;hypothesis]
+
+% \subsection{Tutorial nudge}
+
+% If you show people how to do a certain behavior, then they are more likely to adopt it.
+
+% We define \textit{tutorial nudges} as digital nudges that show developers how to use a specific software engineering tool or programming activity. For example,...
+
+% [Conceptual implementation]
+
+% [benefits/trade-offs;hypothesis]
+
+% \subsection{Reminder nudge}
+
+% If you continually remind humans to adopt a certain activity, they are more likely to adopt it.
+
+% To evaluate the effectiveness of reminders, we developed \textit{reminder nudges} to periodically recommend useful software engineering actions to programmers.
+
+% [Conceptual implementation]
+
+% [benefits/trade-offs;hypothesis]
+
+% \subsection{Positive nudge}
+
+% Nudge theory suggests using positive language is more effective in helping people adopt target behaviors. For example, Doberstein and colleagues evaluated using positive messages to improve attitudes about increasing residential housing density in Canada~\cite{doberstein2016positive}. They compared a neutral control statement of benefits with public statements, private statements, and expert comparisons.  \todo{Framing [Nudge, 36-37]}
+
+% To determine if developers respond better to positive or negative recommendations, we introduce \textit{positive nudges} that commend developers for their work rather than blaming them to encourage future software engineering action adoption.
+
+% If you recommend developer actions in a positive way, then developers are more likely to adopt them.
+
+% \subsection{Effects}
+
+% We hope our nudges have some of the following effects on developers who receive recommendations for software engineering actions...
+
+% \todo{Some interesting effects to consider:}
+% \begin{itemize}
+% \item Baader-Meinhof --- you start seeing something you just learned or on your mind everywhere.
+% \item Diderot Effect --- the act of getting one new thing triggers a cascade of other new things.
+% \item Novelty Effect --- using something new makes you think you are more productivity
+% \item ... should look at behavioral and marketing psychology stuff...
+% \end{itemize}

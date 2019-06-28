@@ -1,0 +1,175 @@
+\section{Experiments and Evaluations}
+
+This section describes completed, in progress, and planned studies for this thesis. The bracketed text represents short names for each experiment and the text in parentheses displays the status and semester of submission.
+
+
+%Peer learning is the process of acquiring knowledge and skills through interactions with colleagues. This type of collaboration is also important for increasing learning among software engineers, however it rarely occurs in industry. For example, Murphy-Hill and colleagues found that interactions between developers is the most effective mode of tool discovery, but they also occur infrequently in practice~\cite{Murphy-Hill2011PeerInteraction}. There are many ways for open source software developers to convey information to peers, and this study aims to discover the best way to increase peer learning for GitHub users. This research seeks to gather data describing how developers react to learning about new tools through recommendations from varying systems: emails, project issues\footnote{https://help.github.com/en/articles/about-issues}, pull requests\footnote{https://help.github.com/en/articles/about-pull-requests}, and suggestions\footnote{https://github.blog/changelog/2018-10-16-suggested-changes/}. Then, we conduct an in-depth analysis on the preferred method reported by participants to determine how effective and useful that feature is for learning in practice.
+
+\subsection{[\sugg] ``Title of Suggestions Paper" (In Progress, Spring 2019)}
+
+\subsubsection{Motivation:} New GitHub feature for recommendations between developers. Can this design improve automated recommendations to software engineers?
+
+\subsubsection{Suggested Changes:} GitHub released suggested changes as a public beta feature in October 2018. This recently introduced feature allows GitHub users to recommend code changes on pull requests to software developers. On a pull request, this feature allows reviewers to add a comment to a line of code and use the \suggtag tag to make a suggested change to the code. Then, the author of the pull request will see the suggested change on the line of code in question and can immediately commit, edit, or reject the proposed suggestion in the code. The feature has become extremely popular on GitHub, with developers ``quick to adopt suggested changes" into their workflow and over 100,000 reported uses within weeks of the initial release, accounting for approximately 4\% of pull request review comments and 10\% of code reviewers.\footnote{\label{SuggestBlog}\url{https://github.blog/2018-11-01-suggested-changes-update/}} We evaluated this feature because of its novelty and fit into our conceptual framework. To my knowledge, this is the first work to analyze the GitHub suggested changes feature.
+
+\subsubsection{Research Questions:}
+
+\begin{itemize}
+    \item[\textbf{RQ1}] How effective is the suggested changes feature compared to other methods of recommendations on GitHub?
+    \item[\textbf{RQ2}] What factors of the suggested changes feature make it useful for developers?
+    \item[\textbf{RQ3}] How well does the suggested changes feature apply to other types of recommendations?
+\end{itemize}
+
+% \begin{table}[H]
+%     \centering
+%     \begin{tabular}{|p{4cm}|p{3cm}|p{5cm}|p{3cm}|} 
+%     \hline
+%         \textbf{Research Questions} & \textbf{Participants} & \textbf{Sampling and Instruments} & \textbf{Analysis} \\ \hline
+%         How effective is the suggested changes feature compared to other methods of recommendations on GitHub (markdown comments, issues, and pull requests)? & Top forked repositories & Analyze pull request comments since October 2018 (introduction of suggestions). To find suggestions search for the \texttt{```suggestion...```} tag in comments. To determine if a suggestion was accepted then search for the line of code within the suggestion tag in the latest version of code for that file. Also will analyze applied markdown pull request comments (\texttt{```...```}), merged PRs, and closed issues during that time span. & Rate of acceptance for each (percentage) \\ \hline
+%         What types of things do developers recommend with the suggested changes feature? & Top forked repositories & Analyze pull request comments since October 2018. To find suggestions search for the \texttt{```suggestion...```} tag in comments. To examine and categorize the types of changes, observe the types of files with comments making suggested changes (i.e. code files (.py, .java,...), configuration files (.xml, .yml,...), documentation (i.e. comment), etc.). Can also compare the same for md comments and pull requests files. Can examine labels for issues & Comparison of suggestion count and acceptance rate for code/config/docs/... \\ \hline
+%         How do suggestions impact the speed of accepting recommendations from developers? & Top forked repositories & Analyze pull request comments from top forked repositories since October 2018. To find suggestions search for the \texttt{```suggestion...```} tag in comments. To determine time, observe difference between created\_at and merged\_at time for PRs with suggestions, PRs with md comments, PRs without suggestions or comments, and issues & average time \\ \hline \hline
+%         What factors of the most useful method (GitHub suggestions) make it effective for recommendations to developers? or Why do developers find the most useful method (GitHub suggestions) useful? & humans & a) send survey to suggestees about their experience or b) in-person study asking participants to observe and comment on recommendations by email, suggestion, pull request, and issue... & Likert scale, Qualitative coding \\ \hline
+        
+%     \end{tabular}
+%     \caption{Guzdial Chart}
+%     \label{tab:my_label}
+% \end{table}
+
+\subsubsection{Methodology:}
+
+\paragraph{Implementation.}
+
+To gather data for analyzing \SUGGS, we wrote a Python script to automatically parse pull request comments for popular GitHub projects sorted by forks, since forking a repository is the recommended way to submit a pull request to projects.\footnote{https://help.github.com/articles/fork-a-repo/} On GitHub, pull requests are the primary way for developers to contribute to a project and review code changes before merging updates into the main code base~\cite{gousios2014pullrequests}. We found \SUGGS~on lines of code by searching for the ``\texttt{```suggestion...```}" markdown command  in pull request comments, and found other pieces of code in pull request comments that aren't suggestions by searching for the ``\texttt{```...```}" GitHub markdown tag.
+
+\paragraph{Projects.}
+
+Most popular projects on GitHub. Don't care about language, but must have pull requests with suggestions accepted.
+
+\paragraph{Data Analysis.}
+
+We evaluated the effectiveness of situated nudges by calculating the acceptance rate of code proposed by reviewers using \SUGGS~and normal pull request comments. To determine acceptance, we checked if the recommended line of code existed in the final version of the pull request. After compiling a list of accepted pull request code suggestions, we also distributed a survey to GitHub users with publicly available email address on their profile who received a suggestion from a reviewer on their code. We asked 5-point Likert scale questions on the usefulness of the \SUGGS~tool and included open-ended free response questions for developers to provide information. We sought to find details about why users found this system effective for suggesting changes, accepting recommended changes, and performing code reviews.
+
+\subsubsection{Results:} Developers adopt suggestions because of the location of recommendations, actionability, etc...This results of this project have been submitted for publication at the 2019 Visual Languages and Human-Centric Computing (VL/HCC) conference.
+
+\subsection{[\jit] ``Title of Just-in-time Paper" (In Progress, Spring 2019)}
+
+\subsubsection{Motivation:} Empirical evaluation to study \timing nudges
+
+\subsubsection{Research Questions:}
+
+\begin{itemize}
+    \item[\textbf{RQ1}] How do developers react to timely recommendations?
+    \item[\textbf{RQ2}] How applicable are timely recommendations to projects?
+\end{itemize}
+
+\subsubsection{Methodology:}
+
+\paragraph{Participants.}
+
+Who are participants, how many, what experience do they have, etc.?
+
+\paragraph{Tasks.}
+
+Real-world software engineering tasks where tools would be useful.
+
+\paragraph{Implementation.}
+
+Dummy IDE plugin or git webhooks. Make timely and untimely recommendations to participants to see how they feel.
+
+\paragraph{Data Analysis.}
+
+Screen audio recordings. Gather whether tool was used or not, feedback, post-survey/interview,...
+
+For RQ2, observed projects on GitHub to evaluate applicability.
+
+\subsubsection{Results:} 
+
+Time matters and software engineers find \timing are effective
+
+\section{Proposed Projects}
+
+This section describes several options for potential projects to complete the dissertation and PhD. The final study for this work will be selected based on feedback from the committee.
+
+\subsection{Positive Recommendations}
+
+\subsubsection{Motivation:}
+
+Nudge theory suggests that wording of recommendations matters for impacting human behavior. For example, the Texas Department of Transportation was having trouble preventing littering on the highways from citizens who believed it was their ``God-given right".\footnote{http://www.cnn.com/2011/US/07/01/texas.pride/index.html} By simply changing the slogan to ``Don't Mess with Texas", they were able to reduce litter by 29\% in one year and it became one of the most popular slogans in America.\footnote{http://www.dontmesswithtexas.org/about/history/} In software engineering, research also shows that the wording of error messages impacts developer comprehension~\cite{barik2018should,becker2016effective}.  According to nudge theorists Sunstein and Thaler, the best way to improve human performance is to provide feedback, specifically ``when they are doing well and when they are making mistakes"~\cite[p.~92]{sunstein2008nudge}. Here, we aim to determine if commending developers for their work is more likely to convince them to adopt useful tools compared to blaming them and pointing out their mistakes.
+
+\subsubsection{Proposed Methodology:}
+
+To examine this, we will find opportunities to praise or chastise developers when recommending software engineering tools. For example, if our system observes a developer fixed a bug then we will recommend a static analysis tool with a message like:
+
+\begin{quote}
+    ``Good job! The static analysis tool Error Prone reported an error used to be here, but you fixed it! You can use this tool to help find more bugs in your code. Check out http://errorprone.info for more information."
+\end{quote} 
+
+On the other hand, if developers introduce a new bug into the code then we will make a recommendation highlighting their mistake:
+
+\begin{quote}
+    ``The static analysis Error Prone reported that you introduced an error in your pull request. You can use this tool to find more bugs in your code. Check out http://errorprone.info for more information."
+\end{quote}
+
+Another example where this approach could be effective is for recommending code coverage tools, commending developers for increasing test coverage while criticizing them for decreasing coverage in automated tool suggestions. To study this, we will modify \TOOL to observe recent pull requests to GitHub repositories and make positive or negative comments recommending software engineering tools based on changes in the output reported by these tools between the original and modified versions.
+
+
+\subsubsection{Hypothesis:}
+
+We hypothesize developers will prefer the positive messages and are more likely to adopt tools from recommendations commending them for their work. Psychology research shows that humans respond better to positive messages. For example, expert doctors are more likely to recommend an operation to patients when told that ``ninety of one hundred are alive" compared to ``ten of one hundred are dead", even though these statements have the exact same meaning~\cite{tversky1973availability}.
+
+\subsection{Automated Program Suggestions}
+
+\subsubsection{Motivation:} 
+
+Our prior work suggests that spatial locality, temporal locality, and actionability are important for improving the effectiveness of automated recommendations. To evaluate an approach with high locality and actionability, we propose automatically generating \SUGGS as a method to recommend tools to developers. These suggestions will have high spatial and temporal locality, adding comments on the lines of code in recently opened pull requests. Additionally, they have high actionability with developers able to click a button to easily apply the suggestion to their code.
+
+\subsubsection{Proposed Methodology:}
+
+Find open pull requests that have errors reported by tools, automatically add a comment with a suggestion to fix the buggy line, observe whether suggestion is applied or ignored
+
+\subsubsection{Hypothesis:}
+
+We hypothesize that automated suggestions will increase the effectiveness of software engineering tool recommendations to developers. Our \sugg~study found that x\% of GitHub suggestions were accepted by developers...\todo{results from suggestions study}
+
+\subsection{Automated Program Repair}
+
+\subsubsection{Motivation:}
+
+Automated program repair is a growing area of research in computer science and software engineering.\footnote{http://program-repair.org/} Another method for making recommendations to developers with actionability and locality is to automatically generate pull requests with fixes for issues found by software engineering tools.
+
+\subsubsection{Proposed Methodology:}
+
+Automatically create pull requests with fixes to errors found by software engineering tools. Analyze GitHub repos, find projects with bugs reported by a tool, automatically generate a pull request that fixes the bug and recommends the tool, observe if PRs are merged/closed/ignored... Pick a tool that provides fixes (i.e. some EP errors)
+
+\subsubsection{Hypothesis:}
+
+We hypothesize this approach to software engineering tool recommendations will be effective for developers. While the results from our \tele~study suggest that automated pull requests are ineffective, we believe this method for recommendations will be able to integrate better into developers' workflow. One of our participants mentioned a desire to know if bugs were worth fixing and another one asked ``Can you fix
+the errors reported by your tool in the build?"~\cite{SorryToBotherYou}. Additionally, Weimer discovered that developers preferred bug reports and addressed issues faster with automatically generated patches~\cite{WeimerPatch}.
+
+\subsection{Meta Tool}
+
+\subsubsection{Motivation:}
+
+Combine approaches into one meta nudge tool for software engineering recommendations. Different situations call for different recommendation types
+
+\subsubsection{Proposed Methodology:}
+
+Compare this approach to individual recommendation types
+
+\subsubsection{Hypothesis:}
+
+Developers prefer this to just one nudge
+
+\subsection{New Environment}
+
+\subsubsection{Motivation:}
+
+Try our approaches to developers in different domains other than GitHub (Gitlab, forums/discussion threads, mechanical turk,...) or examine recommending a developer action other than tool adoption (code review, pair programming...) Do our results generalize?
+
+\subsubsection{Proposed Methodology:}
+
+Run the best approach with different tool and on different platform to see if recommendations as effective as suggestions of \EP to GitHub developers
+
+\subsubsection{Hypothesis:}
+
+Similar results to GitHub users
+

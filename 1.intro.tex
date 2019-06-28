@@ -1,0 +1,34 @@
+\section{Introduction}
+
+\subsection{Developer Action Adoption Problem}
+
+Developer actions are practices and activities created to aid software engineers in the completion of programming tasks. For example, utilizing static analysis tools is a beneficial developer action. Static analysis tools automatically analyze code to find errors during the development process. Research shows adopting static analysis tools is useful for improving software quality and preventing bugs. (Examples of how research says this action is effective).
+
+% Problem
+However, even though research provides evidence that implementing developer actions is useful, they are rarely used by developers in practice. In the context of static analysis tools, Johnson and colleagues outlined reasons why developers avoid using static analysis tools~\cite{Johnson2013Why}. Similarly, adopting agile development methodologies is a useful practice for improving development, but Babb and colleagues outlined barriers development teams face preventing them from adopting agile processes~\cite{BabbAgileBarriers}. There are many barriers preventing software engineers from adopting developer actions that provide benefits to development teams. Tilley and colleagues suggest adoption is an important goal for software engineering researchers and outline challenges developers face when attempting to adopt programs created by researchers, or research-off-the-shelf (ROTS) software~\cite{Tilley2003ROTS}. 
+
+% Impact of Problem
+Improving the developer action adoption problem can have a major impact on the quality of software in industry. The 2017 Software Fail Watch reported 3.7 billion users were impacted and approximately \$1.7 trillion spent on software defects~\cite{SoftwareFailWatch}. The National Institute of Standards and Technology (NIST) reported that software engineers spend 70\textemdash80\% of their work time finding and fixing software errors in code, or debugging, and on average one code defect takes 17.4 hours to debug~\cite{NIST}. Defects in software and the consequences that arise from buggy code can be avoided by integrating developer actions into the software development workflow. These problems will worsen as our society becomes more and more dependent on software and developers continue to ignore helpful actions to improve code quality~\cite{SoftwareEatWorld}.
+
+\subsection{Motivating Example}
+
+\todo{Motivating example}
+
+\subsection{Research Objective}
+
+% Previous approaches
+Recommendation systems have been created to spread knowledge to humans in various domains. For instance, Netflix developed a recommender system to suggest entertainment content to users of the Internet TV streaming platform~\cite{Netflix}. In software engineering, recommendation systems for software engineering (RSSEs) were developed to help developers and provide them with information when making decisions~\cite{RSSE}. For instance, ToolBox is a recommender system that analyzes logs over a shared network to suggest Unix commands to users~\cite{ToolBox}. While many automated approaches have been developed to increase awareness and help users in decision-making, research shows recommendations between humans is still the most effective way developers learn about new tools~\cite{Murphy-Hill2011PeerInteraction}.
+
+% New Approach
+My research goal is, when given a developer who is unaware of a useful developer action in a development situation, to identify the most effective strategy to convince them to adopt the action. Psychology research has long examined how to convince humans to adopt new behaviors and ideas. One of these psychology frameworks is \textit{nudge theory}. A \textit{nudge} is any factor that can influence how people make a decision~\cite{sunstein2008nudge}. This research aims to utilize digital nudges for sending recommendations for developer actions to programmers to increase awareness and adoption of useful software engineering practices. To accomplish this goal, I plan to create and evaluate a conceptual framework to make effective recommendations for developer actions to software engineers based on prior work in nudge theory and software engineering. To evaluate the effectiveness of this framework, I will examine existing systems and build new tools for making recommendations to developers.
+
+\subsection{Contributions}
+
+The contributions of my research include:
+
+\begin{itemize}
+    \item a \textit{conceptual framework} that presents new digital nudge types to modify software engineer behavior,
+    \item a set of \textit{experiments} to evaluate and provide evidence for the digital nudge framework, and
+    \item \TOOL, an \textit{automated recommender system} for recommending software engineering actions to developers with our digital nudge types
+\end{itemize}
+
