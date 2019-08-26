@@ -1,22 +1,9 @@
+% Actions
 \newcommand{\todo}[1]{{\color{red}\bfseries [[TODO: #1]]}}
-
 \newcommand{\reword}{\todo{RE-WORD!!!}}
 \newcommand{\details}{\todo{DETAILS!!!}}
-
-\newcommand{\TOOL}{\textsl{tool-recommender-bot}\xspace}
-\newcommand{\EP}{\textsc{Error Prone}\xspace}
-\newcommand{\suggtag}{\texttt{```suggestion}\xspace}
-\newcommand{\SUGGS}{GitHub \textsl{suggestions}\xspace}
-\newcommand{\telemarketer}{naive \textit{telemarketer design}\xspace}
-\newcommand{\location}{\textit{situated} nudges\xspace}
-\newcommand{\timing}{\textit{just-in-time} nudges\xspace}
-
-% Short names
-\newcommand{\sugg}{\texttt{suggestions}}
-\newcommand{\tele}{\texttt{Sorry to Bother You}}
-\newcommand{\peer}{\texttt{peers}}
-\newcommand{\loc}{\texttt{situated}}
-\newcommand{\jit}{\texttt{just-in-time}}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
 
 \newcommand\insight[1]{
 	\noindent 
@@ -27,5 +14,26 @@
 	}
 }
 
-\newlist{todolist}{itemize}{2}
-\setlist[todolist]{label=$\square$}
+% Tools
+\newcommand{\TOOL}{\textsl{tool-recommender-bot2}\xspace}
+\newcommand{\tool}{\textsl{tool-recommender-bot}\xspace}
+\newcommand{\EP}{\textsc{Error Prone}\xspace}
+\newcommand{\black}{\textsc{Black}}
+\newcommand{\suggtag}{\texttt{```suggestion}\xspace}
+\newcommand{\SUGGS}{GitHub \textsl{suggested changes}\xspace}
+\newcommand{\pom}{\textit{pom.xml}\xspace}
+
+% Approaches
+\newcommand{\tele}{naive \textit{telemarketer design}\xspace}
+\newcommand{\process}{\textit{process-appropriate} nudges\xspace}
+\newcommand{\location}{\textit{situated} nudges\xspace}
+\newcommand{\timing}{\textit{just-in-time} nudges\xspace}
+
+% Short names
+\newcommand{\nudge}{\texttt{proposed}}
+\newcommand{\proc}{\texttt{process-appropriate}}
+\newcommand{\sugg}{\texttt{suggestions}}
+\newcommand{\sorry}{\texttt{Sorry to Bother You}}
+\newcommand{\peer}{\texttt{peers}}
+\newcommand{\loc}{\texttt{situated}}
+\newcommand{\jit}{\texttt{just-in-time}}
