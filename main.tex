@@ -4,18 +4,35 @@
 %
 \documentclass[runningheads]{llncs}
 %
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
 \usepackage{minted}
 \usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{pdftexcmds}
+\usepackage[pdftex]{graphicx}
 \usepackage{xspace}
 \usepackage{booktabs}
 \usepackage{appendix}
-\usepackage{enumitem, amssymb}
+\usepackage{enumitem}
 \usepackage{tikz}
+\usepackage{pgfplots}
+%\usepackage{pgf-pie}
+\usepackage{xcolor,colortbl}
 \usepackage{subfig}
 \usepackage{caption}
+\usepackage{multirow}
 \usepackage[para,online,flushleft]{threeparttable}
 \usepackage{tabulary}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
 \usepackage{url}
+\usepackage{float}
+\usepackage{bookmark}
+\PassOptionsToPackage{hyphens}{url}
+\usetikzlibrary{patterns,shapes,arrows,positioning, fit, snakes, scopes}
+\def\negbar#1{{\rule{#1cm}{5.0pt}}}
+\def\neutralbar#1{{\color{gray}\rule{#1cm}{5.0pt}}}
+\def\posbar#1{{\color{lightgray}\rule{#1cm}{5.0pt}}}
 
 \graphicspath{{figs/}}
 \DeclareGraphicsExtensions{.pdf, .png, .ps}
@@ -44,7 +61,7 @@
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-Software engineering researchers create, develop, and evaluate a variety of tools and practices, or \textit{developer actions}, designed to help developers complete programming tasks. However, unfortunately software engineers often ignore these useful activities in practice. While automated recommender systems have been created to automatically increase awareness and encourage adoption of developer actions, research shows that face-to-face recommendations between colleagues is still the most effective mode of discovery for software engineers. To improve the effectiveness of automated tool recommendations, I propose integrating concepts from \textit{nudge theory}. Nudge theory is a behavioral science framework that examines how to influence human behavior and improve decision-making. This work seeks apply this theory to software engineering to discover the impact of nudges on improving developer behavior in the context of adopting tools and practices. The contributions of this thesis are: 1) \textit{a conceptual framework} explaining how to use concepts from nudge theory to identify the most effective strategy for making recommendations to software developers, 2) \textit{a set of experiments} that evaluate and provide evidence to support the conceptual framework, and 3) \textit{an automated recommender system}, called \TOOL, that utilizes the proposed framework to nudge software engineers to adopt useful development tools and activities. My research aims to demonstrate that incorporating concepts from nudge theory into automated recommendations to developers can increase adoption of developer actions among software engineers.
+Software engineering researchers create, develop, and evaluate a variety of tools and practices, or \textit{developer actions}, designed to help developers complete programming tasks. However, unfortunately software engineers often ignore these useful activities in practice. While automated recommender systems have been created to automatically increase awareness and encourage adoption of developer actions, research shows that face-to-face recommendations between colleagues is still the most effective mode of discovery for software engineers. To improve the effectiveness of automated tool recommendations, I propose integrating concepts from \textit{nudge theory}. Nudge theory is a behavioral science framework that examines how to influence human behavior and improve decision-making. This work seeks apply this theory to software engineering to discover the impact of nudges on improving developer behavior in the context of adopting tools and practices. The contributions of this thesis are: 1) \textit{a conceptual framework} explaining how to use concepts from nudge theory to identify the most effective strategy for making recommendations to software developers, 2) \textit{a set of experiments} that evaluate and provide evidence to support the conceptual framework, and 3) \textit{an automated recommender system}, \TOOL, that utilizes the proposed framework to nudge software engineers to adopt useful development tools and activities. My research aims to demonstrate that incorporating concepts from nudge theory into automated recommendations to developers can increase adoption of developer actions among software engineers.
 \end{abstract}
 
 % Examples:
@@ -54,7 +71,7 @@ Software engineering researchers create, develop, and evaluate a variety of tool
 \noindent
 \textbf{\large Thesis Statement} \\
 
-\insight{My very cool thesis statement: By integrating \textbf{nudge theory} into process-appropriate recommendations to developers, we can increase adoption and awareness of useful software engineering practices and tools.}
+\insight{Effective recommendations to improve software engineer behavior must consider the \textbf{desire}, \textbf{familiarity}, \textbf{social context}, and \textbf{development workflow} of potential users. By implementing recommendations as \textit{\textbf{digital nudges}}, we can increase the adoption of developer actions useful for improving code quality and developer productivity.}
 
 \input{1.intro.tex}
 \input{2.background.tex}
@@ -82,7 +99,7 @@ Software engineering researchers create, develop, and evaluate a variety of tool
 
 \section{Acknowledgements}
 
-This material is based on research supported by the National Science Foundation under Grant No. 1714538. I would like to thank my committee members Dr. Chris Parnin, Dr. Sarah Heckman, Dr. Emerson Murphy-Hill, and Dr. GSR as well as everyone else who made a contribution or provided feedback for this work.
+This material is based on research supported by the National Science Foundation under Grant No. 1714538. I would like to thank my advisor Dr. Chris Parnin and committee members Dr. Sarah Heckman, Dr. Emerson Murphy-Hill, and Dr. \todo{GSR}. Additionally, I would like to thank the Alt-Code lab as well as everyone who contributed, participated, or provided feedback on the work presented in this proposal.
 
 
 % \section{Appendix}
